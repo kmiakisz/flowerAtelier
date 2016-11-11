@@ -261,6 +261,11 @@ p {
     display: none;
   }
 }
+@media screen and (max-width: 768px) {
+  #fh5co-header #fh5co-logo {
+    content:url("logoBialemin.png");
+  }
+}
 #fh5co-header #fh5co-main-nav ul {
   padding: 0;
   margin: 4px 0 0 0;
@@ -363,6 +368,44 @@ p {
     font-size: 30px;
   }
 }
+#fh5co-home .flexslider .slides blockquote {
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  top: 50%;
+  margin-top: -129px;
+  text-align: center;
+  font-size: 30px;
+  line-height: 1.5;
+  padding-left: 0;
+  border-left: none;
+  color: white !important;
+}
+@media screen and (max-width: 768px) {
+  #fh5co-home .flexslider .slides blockquote {
+    padding: 0 20px;
+  }
+}
+#fh5co-home .flexslider .slides blockquote p {
+  font-size: 40px;
+  line-height: 1.5;
+  font-family: "Noto Sans", sans-serif;
+  color: ghostwhite!important;
+}
+@media screen and (max-width: 768px) {
+  #fh5co-home .flexslider .slides blockquote p {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+}
+#fh5co-home .flexslider .slides blockquote p cite {
+  display: block;
+  padding-top: 20px;
+  font-size: 20px;
+  font-family: "Noto Sans", sans-serif;
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.7);
+}
 #fh5co-home .flexslider .fh5co-text .fh5co-go {
   margin-top: 30px;
 }
@@ -398,16 +441,16 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
 }
-#fh5co-home .flexslider .fh5co-overlay {
-  position: absolute;
-  z-index: 3;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: .3;
-  background: #444853;
-}
+/*#fh5co-home .flexslider .fh5co-overlay {*/
+  /*position: absolute;*/
+  /*z-index: 3;*/
+  /*top: 0;*/
+  /*bottom: 0;*/
+  /*left: 0;*/
+  /*right: 0;*/
+  /*opacity: .0;*/
+  /*background: #444853;*/
+/*}*/
 #fh5co-home .flexslider .flex-control-nav,
 #fh5co-home .flexslider .flex-direction-nav {
   display: none;
@@ -940,6 +983,7 @@ p {
 
 .fh5co-nav-toggle i::after {
   bottom: -7px;
+  color: #444853;
 }
 
 .fh5co-nav-toggle:hover i::before {
@@ -970,6 +1014,7 @@ p {
   -ms-transform: rotateZ(-45deg);
   -o-transform: rotateZ(-45deg);
   transform: rotateZ(-45deg);
+  color: #444853;
 }
 
 .fh5co-nav-toggle {
