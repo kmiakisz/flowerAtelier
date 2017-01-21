@@ -72,7 +72,7 @@
 	<!--<script type="text/javascript" src="js/placeholders.min.js"></script>-->
 	<!--<script type="text/javascript" src="js/custom.js"></script>-->
 	<script type="text/javascript" src="js/instafeedmin.js"></script>
-
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
 
 	<!--<script async type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>-->
 	<!--<script type="text/javascript">-->
@@ -187,8 +187,22 @@
 
 			</div>
 		</div>
+
+
 		<div id="fh5co-portfolio" data-section="portfolio">
-			<div class="container">
+		<style>
+			.hideContent {
+				overflow: hidden;
+				line-height: 1em;
+				height: 2em;
+			}
+
+			.showContent {
+				line-height: 1em;
+				height: auto;
+			}
+		</style>
+				<!--<div class="container">-->
 				<div class="row r-pb">
 					<div class="col-md-8 col-md-offset-2 text-center section-heading">
 						<h2 class="fh5co-section-title animate-box">Galeria</h2>
@@ -297,6 +311,7 @@
 							</a>
 						</div>
 					</div>
+					<div class="content hideContent">
 					<div class="col-md-4 col-sm-4 col-xs-6 col-xxs-12 animate-box">
 						<div class="img-grid">
 							<img src="images/13.jpg" alt="Okrągły flower box - czarny" class="img-responsive">
@@ -581,9 +596,33 @@
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
+					<script>
+						$(".show a").on("click", function() {
+							event.preventDefault();
+							alert("Dziwka");
+							var $this = $(this);
+							var $content = $this.parent().prev("div.content");
+							console.log($content);
+							var linkText = $this.text().toUpperCase();
+							console.log(linkText);
+							if(linkText === "SHOW MORE"){
+								linkText = "Show less";
+								$content.switchClass("hideContent", "showContent", 400);
+							} else {
+								linkText = "Show more";
+								$content.switchClass("showContent", "hideContent", 400);
+							};
 
+							$this.text(linkText);
+						});
+					</script>
+					<div class="show" id="show">
+						<a href="#">Pokaż więcej</a>
+					</div>
+			</div>
+
+		<!--</div>-->
+	</div>
 		<div id="fh5co-about" data-section="about">
 			<div class="container">
 				<div class="row r-pb">
